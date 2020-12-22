@@ -5,11 +5,16 @@
 [![License](https://img.shields.io/cocoapods/l/SCoordinator.svg?style=flat)](https://cocoapods.org/pods/SCoordinator)
 [![Platform](https://img.shields.io/cocoapods/p/SCoordinator.svg?style=flat)](https://cocoapods.org/pods/SCoordinator)
 
+
+## Introduce
+
+By studying the Coordinator Pattern introduced by Soroush Khanlou, I created a simple Coordinator library. 
+[Soroush Khanlou's Blog](https://khanlou.com/2015/01/the-coordinator/)
+❗️This project is still unfinished
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
