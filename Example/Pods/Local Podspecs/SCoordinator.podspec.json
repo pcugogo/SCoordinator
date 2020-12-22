@@ -1,0 +1,22 @@
+{
+  "name": "SCoordinator",
+  "version": "0.1.0",
+  "summary": "A short description of SCoordinator.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/pcugogo/SCoordinator",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pcugogo": "pcugogo@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/pcugogo/SCoordinator.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SCoordinator/Classes/**/*"
+}

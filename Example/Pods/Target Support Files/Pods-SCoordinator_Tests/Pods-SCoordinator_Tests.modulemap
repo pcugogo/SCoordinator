@@ -1,0 +1,6 @@
+framework module Pods_SCoordinator_Tests {
+  umbrella header "Pods-SCoordinator_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
