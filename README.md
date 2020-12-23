@@ -8,7 +8,8 @@
 
 ## Introduce
 
-By studying the Coordinator Pattern introduced by Soroush Khanlou, I created a simple Coordinator library. 
+By studying the Coordinator Pattern introduced by Soroush Khanlou, I created a simple Coordinator library.
+ 
 [Soroush Khanlou's Blog](https://khanlou.com/2015/01/the-coordinator/)
 
 ❗️This project is still unfinished
