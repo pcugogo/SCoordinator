@@ -12,8 +12,6 @@ By studying the Coordinator Pattern introduced by Soroush Khanlou, I created a s
  
 [Soroush Khanlou's Blog](https://khanlou.com/2015/01/the-coordinator/)
 
-❗️This project is still unfinished
-
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
