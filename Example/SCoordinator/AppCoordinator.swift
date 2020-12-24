@@ -11,9 +11,10 @@ import UIKit
 
 final class AppCoordinator: Coordinator<UIWindow> {
     
-    func navigate(to route: Route) {
+    override func navigate(to route: Route) {
+        
         let mainViewController = MainViewController()
-        let mainCoordinator = MainCoordinator(root: mainViewController)
+        let mainCoordinator = MainCoordinator(rootView: mainViewController)
         
         let redModel = RedModel()
         redModel.setCoordinator(coordinator: mainCoordinator)
@@ -22,8 +23,9 @@ final class AppCoordinator: Coordinator<UIWindow> {
         orangeModel.setCoordinator(coordinator: mainCoordinator)
         
         mainViewController.setAttributes(redModel: redModel, orangeModel: orangeModel)
-        root?.rootViewController = mainViewController
-        root?.makeKeyAndVisible()
+        
+        rootView.rootViewController = mainViewController
+        rootView.makeKeyAndVisible()
     }
     
     func end(animated: Bool, completion: (() -> Void)?) {}

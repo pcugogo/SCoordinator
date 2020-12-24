@@ -11,6 +11,6 @@ import Foundation
 final class BlueModel: BaseModel {
     
     func popView() {
-        coordinator.pop(animated: true)
+        coordinator.end(type: .popView(animated: true))
     }
 }

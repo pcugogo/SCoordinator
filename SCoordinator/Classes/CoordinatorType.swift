@@ -9,6 +9,5 @@ import Foundation
 
 public protocol CoordinatorType: AnyObject {
     func navigate(to route: Route)
-    func end(animated: Bool, completion: (() -> Void)?)
-    func pop(animated: Bool)
+    func end(type: EndType)
 }
