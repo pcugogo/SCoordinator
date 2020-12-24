@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EndType {
+public enum EndType {
     case dismiss(animated: Bool, completion: (() -> Void)?)
     case popView(animated: Bool)
 }
