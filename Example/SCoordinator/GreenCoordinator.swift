@@ -11,9 +11,9 @@ import SCoordinator
 
 final class GreenCoordinator : Coordinator<UIViewController> {
     
-    func navigate(to route: Route) {}
+    override func navigate(to route: Route) {}
     func end(animated: Bool, completion: (() -> Void)?) {
-        root.dismiss(animated: animated, completion: completion)
+        rootView.dismiss(animated: animated, completion: completion)
     }
     func pop(animated: Bool) {}
     deinit {

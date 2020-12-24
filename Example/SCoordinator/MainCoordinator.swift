@@ -11,7 +11,7 @@ import SCoordinator
 
 final class MainCoordinator: Coordinator<UIViewController> {
     
-    func navigate(to route: Route) {
+    override func navigate(to route: Route) {
         guard let route = route as? MainRoute else { return }
         
         switch route {
@@ -23,7 +23,7 @@ final class MainCoordinator: Coordinator<UIViewController> {
     }
     
     func end(animated: Bool, completion: (() -> Void)?) {
-        root.dismiss(animated: animated, completion: completion)
+        rootView.dismiss(animated: animated, completion: completion)
     }
     
     func pop(animated: Bool) {}
@@ -38,19 +38,19 @@ extension MainCoordinator {
     private func navigateToYellow() {
         let viewController = YellowViewController()
         let yellowNavigationController = UINavigationController(rootViewController: viewController)
-        let yellowCoordinator = YellowCoordinator(root: yellowNavigationController)
+        let yellowCoordinator = YellowCoordinator(rootView: yellowNavigationController)
         let model = YellowModel()
         model.setCoordinator(coordinator: yellowCoordinator)
         viewController.model = model
-        root.present(yellowNavigationController, animated: true, completion: nil)
+        rootView.present(yellowNavigationController, animated: true, completion: nil)
     }
     
     private func navigateToGreen() {
          let greenViewController = GreenViewController()
-        let greenCoordinator = GreenCoordinator(root: greenViewController)
+        let greenCoordinator = GreenCoordinator(rootView: greenViewController)
         let model = GreenModel()
         model.setCoordinator(coordinator: greenCoordinator)
         greenViewController.model = model
-        root.present(greenViewController, animated: true)
+        rootView.present(greenViewController, animated: true)
     }
 }
