@@ -8,6 +8,6 @@
 import Foundation
 
 public protocol CoordinatorType: AnyObject {
-    func navigate(route: Route)
+    func navigate(to route: Route)
     func end(type: EndType)
 }
