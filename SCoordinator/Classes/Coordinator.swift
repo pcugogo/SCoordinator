@@ -7,15 +7,15 @@
 
 import UIKit
 
-class Coordinator<RootView: RootViewType>: CoordinatorType, ParentCoordinator {
+open class Coordinator<RootView: RootViewType>: CoordinatorType, ParentCoordinator {
     
-    unowned var rootView: RootView
+    public unowned var rootView: RootView
     unowned var parent: ParentCoordinator!
     
     var childrens: [String:CoordinatorType] = [:]
     
     
-    init(rootView: RootView) {
+    public init(rootView: RootView) {
         self.rootView = rootView
     }
     
@@ -25,9 +25,9 @@ class Coordinator<RootView: RootViewType>: CoordinatorType, ParentCoordinator {
         parent.childrens[childKey] = self
     }
     
-    func navigate(route: Route) {}
+    open func navigate(to route: Route) {}
     
-    func end(type: EndType) {
+    public func end(type: EndType) {
         switch type {
         case let .dismiss(animated, completion):
             childrens.removeValue(forKey: String(describing: Self.self))
