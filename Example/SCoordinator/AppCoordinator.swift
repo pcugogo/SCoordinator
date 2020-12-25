@@ -17,10 +17,10 @@ final class AppCoordinator: Coordinator<UIWindow> {
         let mainCoordinator = MainCoordinator(rootView: mainViewController)
         
         let redModel = RedModel()
-        redModel.setCoordinator(coordinator: mainCoordinator)
+        redModel.setCoordinator(mainCoordinator)
         
         let orangeModel = OrangeModel()
-        orangeModel.setCoordinator(coordinator: mainCoordinator)
+        orangeModel.setCoordinator(mainCoordinator)
         
         mainViewController.setAttributes(redModel: redModel, orangeModel: orangeModel)
         

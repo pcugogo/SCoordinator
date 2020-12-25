@@ -40,7 +40,7 @@ extension MainCoordinator {
         let yellowNavigationController = UINavigationController(rootViewController: viewController)
         let yellowCoordinator = YellowCoordinator(rootView: yellowNavigationController)
         let model = YellowModel()
-        model.setCoordinator(coordinator: yellowCoordinator)
+        model.setCoordinator(yellowCoordinator)
         viewController.model = model
         rootView.present(yellowNavigationController, animated: true, completion: nil)
     }
@@ -49,7 +49,7 @@ extension MainCoordinator {
          let greenViewController = GreenViewController()
         let greenCoordinator = GreenCoordinator(rootView: greenViewController)
         let model = GreenModel()
-        model.setCoordinator(coordinator: greenCoordinator)
+        model.setCoordinator(greenCoordinator)
         greenViewController.model = model
         rootView.present(greenViewController, animated: true)
     }
