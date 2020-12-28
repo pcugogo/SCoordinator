@@ -6,28 +6,24 @@
 //  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
-import SCoordinator
 import UIKit
+import SCoordinator
 
-final class AppCoordinator: Coordinator<UIWindow> {
+final class AppCoordinator: RootCoordinator<UIWindow> {
     
     override func navigate(to route: Route) {
         
         let mainViewController = MainViewController()
-        let mainCoordinator = MainCoordinator(rootView: mainViewController)
-        
+        let mainCoordinator = MainCoordinator(rootView: mainViewController, parentCoordinator: self)
         let redModel = RedModel()
-        redModel.setCoordinator(coordinator: mainCoordinator)
+        redModel.setCoordinator(mainCoordinator)
         
         let orangeModel = OrangeModel()
-        orangeModel.setCoordinator(coordinator: mainCoordinator)
+        orangeModel.setCoordinator(mainCoordinator)
         
         mainViewController.setAttributes(redModel: redModel, orangeModel: orangeModel)
         
         rootView.rootViewController = mainViewController
         rootView.makeKeyAndVisible()
     }
-    
-    func end(animated: Bool, completion: (() -> Void)?) {}
-    func pop(animated: Bool) {}
 }

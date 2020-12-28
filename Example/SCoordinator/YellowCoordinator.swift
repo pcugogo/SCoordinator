@@ -40,16 +40,16 @@ extension YellowCoordinator {
     private func navigateToBlue() {
         let blueViewController = BlueViewController()
         let model = BlueModel()
-        model.setCoordinator(coordinator: self)
+        model.setCoordinator(self)
         blueViewController.model = model
         rootView.pushViewController(blueViewController, animated: true)
     }
     
     private func navigateToGreen() {
         let greenViewController = GreenViewController()
-        let greenCoordinator = GreenCoordinator(rootView: greenViewController)
+        let greenCoordinator = GreenCoordinator(rootView: greenViewController, parentCoordinator: self)
         let model = GreenModel()
-        model.setCoordinator(coordinator: greenCoordinator)
+        model.setCoordinator(greenCoordinator)
         greenViewController.model = model
         rootView.present(greenViewController, animated: true)
     }
