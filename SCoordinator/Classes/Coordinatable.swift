@@ -13,7 +13,6 @@ public protocol Coordinatable: AnyObject {
 
 public extension Coordinatable {
     func setCoordinator(_ coordinator: CoordinatorType) {
-        
         self.coordinator = coordinator
     }
 }

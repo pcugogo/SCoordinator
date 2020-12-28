@@ -18,6 +18,8 @@
 		B3C74395EC192CC4A175EE61EF62EE0D /* SCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 790CFE27E2B364D3868C76CB587E8E21 /* SCoordinator-dummy.m */; };
 		FC157B272595051A009CC119 /* EndType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC157B262595051A009CC119 /* EndType.swift */; };
 		FC157B2C25950675009CC119 /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC157B2B25950675009CC119 /* ParentCoordinator.swift */; };
+		FC1CD20B2599F8B600F36B9F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1CD20A2599F8B600F36B9F /* BaseCoordinator.swift */; };
+		FC1CD21B2599F9B500F36B9F /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1CD21A2599F9B500F36B9F /* RootCoordinator.swift */; };
 		FC3F914D25921321003D2327 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F914C25921321003D2327 /* Coordinator.swift */; };
 		FC3F915525921341003D2327 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F915425921341003D2327 /* CoordinatorType.swift */; };
 		FC3F91622592136C003D2327 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91612592136C003D2327 /* Coordinatable.swift */; };
@@ -79,6 +81,8 @@
 		F107A861C73A75D6B6CAD474BA568E97 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FC157B262595051A009CC119 /* EndType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EndType.swift; path = SCoordinator/Classes/EndType.swift; sourceTree = "<group>"; };
 		FC157B2B25950675009CC119 /* ParentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParentCoordinator.swift; path = SCoordinator/Classes/ParentCoordinator.swift; sourceTree = "<group>"; };
+		FC1CD20A2599F8B600F36B9F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseCoordinator.swift; path = SCoordinator/Classes/BaseCoordinator.swift; sourceTree = "<group>"; };
+		FC1CD21A2599F9B500F36B9F /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootCoordinator.swift; path = SCoordinator/Classes/RootCoordinator.swift; sourceTree = "<group>"; };
 		FC3F914C25921321003D2327 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = SCoordinator/Classes/Coordinator.swift; sourceTree = "<group>"; };
 		FC3F915425921341003D2327 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoordinatorType.swift; path = SCoordinator/Classes/CoordinatorType.swift; sourceTree = "<group>"; };
 		FC3F91612592136C003D2327 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Coordinatable.swift; path = SCoordinator/Classes/Coordinatable.swift; sourceTree = "<group>"; };
@@ -214,8 +218,7 @@
 		D91D5D3B90EE3C090D988CCB0851AF35 /* SCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				7E8EC20E9821DF50777C944E498A3A7C /* Pod */,
-				19DB734CD2EE11C7A6AB06ED37EF65DE /* Support Files */,
+				FC1CD20A2599F8B600F36B9F /* BaseCoordinator.swift */,
 				FC3F914C25921321003D2327 /* Coordinator.swift */,
 				FC3F915425921341003D2327 /* CoordinatorType.swift */,
 				FC3F91612592136C003D2327 /* Coordinatable.swift */,
@@ -223,8 +226,11 @@
 				FC157B2B25950675009CC119 /* ParentCoordinator.swift */,
 				FC3F9287259263EB003D2327 /* RootViewType.swift */,
 				FC3F9170259213AE003D2327 /* Route.swift */,
+				FC1CD21A2599F9B500F36B9F /* RootCoordinator.swift */,
 				FC3F9175259213C1003D2327 /* UIViewController+RootViewType.swift */,
 				FC3F917A259213DA003D2327 /* UIWindow+RootViewType.swift */,
+				7E8EC20E9821DF50777C944E498A3A7C /* Pod */,
+				19DB734CD2EE11C7A6AB06ED37EF65DE /* Support Files */,
 			);
 			name = SCoordinator;
 			path = ../..;
@@ -408,6 +414,8 @@
 				FC3F91622592136C003D2327 /* Coordinatable.swift in Sources */,
 				FC3F915525921341003D2327 /* CoordinatorType.swift in Sources */,
 				FC3F917B259213DA003D2327 /* UIWindow+RootViewType.swift in Sources */,
+				FC1CD21B2599F9B500F36B9F /* RootCoordinator.swift in Sources */,
+				FC1CD20B2599F8B600F36B9F /* BaseCoordinator.swift in Sources */,
 				FC157B2C25950675009CC119 /* ParentCoordinator.swift in Sources */,
 				FC157B272595051A009CC119 /* EndType.swift in Sources */,
 				FC3F9171259213AE003D2327 /* Route.swift in Sources */,

@@ -47,7 +47,7 @@ extension YellowCoordinator {
     
     private func navigateToGreen() {
         let greenViewController = GreenViewController()
-        let greenCoordinator = GreenCoordinator(rootView: greenViewController)
+        let greenCoordinator = GreenCoordinator(rootView: greenViewController, parentCoordinator: self)
         let model = GreenModel()
         model.setCoordinator(greenCoordinator)
         greenViewController.model = model

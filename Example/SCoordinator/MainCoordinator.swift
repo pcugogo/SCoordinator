@@ -38,7 +38,7 @@ extension MainCoordinator {
     private func navigateToYellow() {
         let viewController = YellowViewController()
         let yellowNavigationController = UINavigationController(rootViewController: viewController)
-        let yellowCoordinator = YellowCoordinator(rootView: yellowNavigationController)
+        let yellowCoordinator = YellowCoordinator(rootView: yellowNavigationController, parentCoordinator: self)
         let model = YellowModel()
         model.setCoordinator(yellowCoordinator)
         viewController.model = model
@@ -47,7 +47,7 @@ extension MainCoordinator {
     
     private func navigateToGreen() {
          let greenViewController = GreenViewController()
-        let greenCoordinator = GreenCoordinator(rootView: greenViewController)
+        let greenCoordinator = GreenCoordinator(rootView: greenViewController, parentCoordinator: self)
         let model = GreenModel()
         model.setCoordinator(greenCoordinator)
         greenViewController.model = model
