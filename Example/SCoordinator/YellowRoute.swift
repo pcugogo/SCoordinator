@@ -11,4 +11,5 @@ import SCoordinator
 enum YellowRoute: Route {
     case blue
     case green
+    case changeRoot
 }

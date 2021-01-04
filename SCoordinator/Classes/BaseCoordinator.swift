@@ -9,9 +9,16 @@ import Foundation
 
 open class BaseCoordinator<RootView: RootViewType>: CoordinatorType, ParentCoordinator {
     
+    // Root View of the current coordinator.
     public unowned var rootView: RootView!
+    
+    // Root coordinator of the current coordinator.
+    public unowned var rootCoordinator: ParentCoordinator!
+    
+    // Parent coordinator of the current coordinator.
     internal unowned var parent: ParentCoordinator!
     
+    // Childrens coordinator of the current coordinator.
     public var childrens: [String:CoordinatorType] = [:]
     
     open func navigate(to route: Route) {}
@@ -34,3 +41,4 @@ open class BaseCoordinator<RootView: RootViewType>: CoordinatorType, ParentCoord
         }
     }
 }
+

@@ -13,6 +13,7 @@ final class BlueViewController: BaseViewController {
     var model: BlueModel?
     
     private let stackView = UIStackView()
+    private let changeRootViewButton = UIButton()
     private let popViewButton = UIButton()
     
     override func viewDidLoad() {
@@ -33,6 +34,11 @@ extension BlueViewController {
         popViewButton.addTarget(self, action: #selector(popViewButtonAction), for: .touchUpInside)
         popViewButton.setTitle("PopView", for: .normal)
         popViewButton.setTitleColor(.black, for: .normal)
+        
+        changeRootViewButton.backgroundColor = .orange
+        changeRootViewButton.addTarget(self, action: #selector(changeRootViewButtonAction), for: .touchUpInside)
+        changeRootViewButton.setTitle("ChangeRoot", for: .normal)
+        changeRootViewButton.setTitleColor(.black, for: .normal)
     }
     
     private func layoutViews() {
@@ -47,7 +53,7 @@ extension BlueViewController {
             ]
         )
         
-        stackView.addArrangedSubview(popViewButton)
+        stackView.addArrangedSubviews([popViewButton, changeRootViewButton])
     }
 }
 
@@ -55,5 +61,8 @@ extension BlueViewController {
     
     @objc func popViewButtonAction() {
         model?.popView()
+    }
+    @objc func changeRootViewButtonAction() {
+        model?.changeRoot()
     }
 }

@@ -22,12 +22,6 @@ final class MainCoordinator: Coordinator<UIViewController> {
         }
     }
     
-    func end(animated: Bool, completion: (() -> Void)?) {
-        rootView.dismiss(animated: animated, completion: completion)
-    }
-    
-    func pop(animated: Bool) {}
-    
     deinit {
         print("\(String(describing: Self.self)) deinit")
     }
@@ -38,7 +32,8 @@ extension MainCoordinator {
     private func navigateToYellow() {
         let viewController = YellowViewController()
         let yellowNavigationController = UINavigationController(rootViewController: viewController)
-        let yellowCoordinator = YellowCoordinator(rootView: yellowNavigationController, parentCoordinator: self)
+        let yellowCoordinator = YellowCoordinator(rootView: yellowNavigationController)
+        yellowCoordinator.start(with: self)
         let model = YellowModel()
         model.setCoordinator(yellowCoordinator)
         viewController.model = model
@@ -46,8 +41,9 @@ extension MainCoordinator {
     }
     
     private func navigateToGreen() {
-         let greenViewController = GreenViewController()
-        let greenCoordinator = GreenCoordinator(rootView: greenViewController, parentCoordinator: self)
+        let greenViewController = GreenViewController()
+        let greenCoordinator = GreenCoordinator(rootView: greenViewController)
+        greenCoordinator.start(with: self)
         let model = GreenModel()
         model.setCoordinator(greenCoordinator)
         greenViewController.model = model
