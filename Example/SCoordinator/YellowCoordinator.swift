@@ -63,7 +63,7 @@ extension YellowCoordinator {
         
         UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: false, completion: nil)
         UIApplication.shared.keyWindow?.rootViewController = mainViewController
-        mainCoordinator.change(for: rootCoordinator)
+        mainCoordinator.change(for: rootCoordinator!)
     }
 }
 

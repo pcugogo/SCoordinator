@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol ParentCoordinator: AnyObject {
-    var rootCoordinator: ParentCoordinator! { get }
+    var rootCoordinator: ParentCoordinator? { get }
     var childrens: [String:CoordinatorType] { get set }
 }
 
