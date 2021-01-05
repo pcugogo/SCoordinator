@@ -19,15 +19,9 @@ final class YellowCoordinator: Coordinator<UINavigationController> {
             navigateToBlue()
         case .green:
             navigateToGreen()
+        case .changeRoot:
+            changeRoot()
         }
-    }
-    
-    func end(animated: Bool, completion: (() -> Void)?) {
-        rootView.dismiss(animated: animated, completion: completion)
-    }
-    
-    func pop(animated: Bool) {
-        rootView.popViewController(animated: animated)
     }
     
     deinit {
@@ -47,10 +41,29 @@ extension YellowCoordinator {
     
     private func navigateToGreen() {
         let greenViewController = GreenViewController()
-        let greenCoordinator = GreenCoordinator(rootView: greenViewController, parentCoordinator: self)
+        let greenCoordinator = GreenCoordinator(rootView: greenViewController)
+        greenCoordinator.start(with: self)
         let model = GreenModel()
         model.setCoordinator(greenCoordinator)
         greenViewController.model = model
         rootView.present(greenViewController, animated: true)
     }
+    
+    private func changeRoot() {
+        let mainViewController = MainViewController()
+        let mainCoordinator = MainCoordinator(rootView: mainViewController)
+        
+        let redModel = RedModel()
+        redModel.setCoordinator(mainCoordinator)
+        
+        let orangeModel = OrangeModel()
+        orangeModel.setCoordinator(mainCoordinator)
+        
+        mainViewController.setAttributes(redModel: redModel, orangeModel: orangeModel)
+        
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: false, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController = mainViewController
+        mainCoordinator.change(for: rootCoordinator!)
+    }
 }
+

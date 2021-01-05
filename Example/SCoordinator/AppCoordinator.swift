@@ -14,7 +14,8 @@ final class AppCoordinator: RootCoordinator<UIWindow> {
     override func navigate(to route: Route) {
         
         let mainViewController = MainViewController()
-        let mainCoordinator = MainCoordinator(rootView: mainViewController, parentCoordinator: self)
+        let mainCoordinator = MainCoordinator(rootView: mainViewController)
+        mainCoordinator.start(with: self)
         let redModel = RedModel()
         redModel.setCoordinator(mainCoordinator)
         
