@@ -23,28 +23,8 @@ open class Coordinator<RootView: RootViewType>: BaseCoordinator<RootView> {
         setParent(with: parentCoordinator)
     }
     
-    public override func end(type: EndType) {
-        switch type {
-        case let .dismiss(animated, completion):
-            if let viewController = rootView as? UIViewController {
-                viewController.dismiss(animated: animated, completion: completion)
-                self.parent?.childrens.removeValue(forKey: String(describing: Self.self))
-            } else {
-                NSLog("ERROR: - The RootView of **\(String(describing: Self.self))** is not a UIViewController type.")
-            }
-        case let .popView(animated):
-            if let navigationController = rootView as? UINavigationController {
-                navigationController.popViewController(animated: animated)
-            } else {
-                NSLog("ERROR: - The RootView of **\(String(describing: Self.self))** is not a UINavigationController type.")
-            }
-        }
-    }
-    
-    public func change(for rootCoordinator: ParentCoordinator) {
-        rootCoordinator.childrens.removeAll()
-        self.rootCoordinator = rootCoordinator
-        setParent(with: rootCoordinator)
+    public override func end() {
+        self.parent?.childrens.removeValue(forKey: String(describing: Self.self))
     }
     
     private func setParent(with coordinator: ParentCoordinator) {

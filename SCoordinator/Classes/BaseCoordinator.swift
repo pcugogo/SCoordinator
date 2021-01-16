@@ -19,6 +19,6 @@ open class BaseCoordinator<RootView: RootViewType>: CoordinatorType, ParentCoord
     internal weak var parent: ParentCoordinator?
     
     open func navigate(to route: Route) {}
-    public func end(type: EndType) {}
+    public func end() {}
 }
 
