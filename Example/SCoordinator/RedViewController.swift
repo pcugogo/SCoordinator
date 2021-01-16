@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RedViewController: BaseViewController {
+final class RedViewController: UIViewController {
     
     var model: RedModel?
     
@@ -21,12 +21,18 @@ final class RedViewController: BaseViewController {
         setAttributes()
         layoutViews()
     }
+    
+    deinit {
+        print("RedViewController deinit")
+    }
 }
 
 extension RedViewController {
     private func setAttributes() {
         
         self.view.backgroundColor = .systemPink
+        
+        self.navigationController?.navigationBar.topItem?.title = "Red"
         
         stackView.axis = .vertical
         

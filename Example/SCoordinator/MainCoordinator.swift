@@ -9,16 +9,16 @@
 import UIKit
 import SCoordinator
 
-final class MainCoordinator: Coordinator<UIViewController> {
+final class MainCoordinator: Coordinator<MainViewController> {
     
     override func navigate(to route: Route) {
-        guard let route = route as? MainRoute else { return }
+        guard let route = route as? ExampleRoute else { return }
         
         switch route {
-        case .yellow:
-            navigateToYellow()
-        case .green:
-            navigateToGreen()
+        case .main:
+            configureMain()
+        default:
+            break
         }
     }
     
@@ -29,24 +29,21 @@ final class MainCoordinator: Coordinator<UIViewController> {
 
 extension MainCoordinator {
     
-    private func navigateToYellow() {
-        let viewController = YellowViewController()
-        let yellowNavigationController = UINavigationController(rootViewController: viewController)
-        let yellowCoordinator = YellowCoordinator(rootView: yellowNavigationController)
-        yellowCoordinator.start(with: self)
-        let model = YellowModel()
-        model.setCoordinator(yellowCoordinator)
-        viewController.model = model
-        rootView.present(yellowNavigationController, animated: true, completion: nil)
-    }
-    
-    private func navigateToGreen() {
-        let greenViewController = GreenViewController()
-        let greenCoordinator = GreenCoordinator(rootView: greenViewController)
-        greenCoordinator.start(with: self)
-        let model = GreenModel()
-        model.setCoordinator(greenCoordinator)
-        greenViewController.model = model
-        rootView.present(greenViewController, animated: true)
+    private func configureMain() {
+        let redNavigationController = UINavigationController()
+        let orangeNavigationController = UINavigationController()
+        
+        let redCoordinator = RedCoordinator(rootView: redNavigationController)
+        redCoordinator.start(with: self)
+        redCoordinator.navigate(to: ExampleRoute.red)
+        
+        let orangeCoordinator = OrangeCoordinator(rootView: orangeNavigationController)
+        orangeCoordinator.start(with: self)
+        orangeCoordinator.navigate(to: ExampleRoute.orange)
+        
+        rootView.viewControllers = [
+            redNavigationController,
+            orangeNavigationController
+        ]
     }
 }

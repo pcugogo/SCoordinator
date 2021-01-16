@@ -1,19 +1,19 @@
 //
-//  GreenViewController.swift
+//  LoginViewController.swift
 //  SCoordinator_Example
 //
-//  Created by ChanWook Park on 2020/12/22.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Created by ChanWook Park on 2021/01/16.
+//  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import UIKit
 
-final class GreenViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
-    var model: GreenModel?
+    var model: LoginModel?
     
     private let stackView = UIStackView()
-    private let dismissButton = UIButton()
+    private let signInButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,22 +22,22 @@ final class GreenViewController: UIViewController {
     }
     
     deinit {
-        print("GreenViewController deinit")
+        print("LoginViewController deinit")
     }
 }
 
-extension GreenViewController {
+extension LoginViewController {
     
     private func setAttributes() {
         
-        self.view.backgroundColor = .green
+        self.view.backgroundColor = .white
         
         stackView.axis = .vertical
         
-        dismissButton.backgroundColor = .white
-        dismissButton.addTarget(self, action: #selector(dismissButtonAction), for: .touchUpInside)
-        dismissButton.setTitle("Dismiss", for: .normal)
-        dismissButton.setTitleColor(.black, for: .normal)
+        signInButton.backgroundColor = .systemBlue
+        signInButton.addTarget(self, action: #selector(signInButtonAction), for: .touchUpInside)
+        signInButton.setTitle("Sign In", for: .normal)
+        signInButton.setTitleColor(.black, for: .normal)
     }
     
     private func layoutViews() {
@@ -53,12 +53,12 @@ extension GreenViewController {
             ]
         )
         
-        stackView.addArrangedSubview(dismissButton)
+        stackView.addArrangedSubview(signInButton)
     }
 }
 
-extension GreenViewController {
-    @objc func dismissButtonAction() {
-        model?.dismiss()
+extension LoginViewController {
+    @objc func signInButtonAction() {
+        model?.moveToMain()
     }
 }

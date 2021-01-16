@@ -11,14 +11,10 @@ import Foundation
 final class YellowModel: BaseModel {
     
     func moveToBlue() {
-        coordinator.navigate(to: YellowRoute.blue)
+        coordinator?.navigate(to: ExampleRoute.blue)
     }
     
     func moveToGreen() {
-        coordinator.navigate(to: YellowRoute.green)
-    }
-    
-    func dismiss() {
-        coordinator.end(type: .dismiss(animated: true, completion: nil))
+        coordinator?.navigate(to: ExampleRoute.green)
     }
 }

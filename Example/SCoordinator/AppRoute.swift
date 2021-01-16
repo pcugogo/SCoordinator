@@ -8,6 +8,25 @@
 
 import SCoordinator
 
-enum AppRoute: Route {
+enum ExampleRoute: Route {
+    
+    // Main
     case main
+    
+    // Login
+    case login
+    // Red
+    case red
+    case yellow
+    case blue
+    case green
+    case changeRoot
+    
+    // Orange
+    case orange
+    case navy
+    
+    // Common
+    case popView(animated: Bool = true)
+    case dismiss(animated: Bool = true, completion: (() -> Void)? = nil)
 }
