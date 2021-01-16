@@ -8,18 +8,21 @@
 
 import UIKit
 
-final class BlueViewController: BaseViewController {
+final class BlueViewController: UIViewController {
     
     var model: BlueModel?
     
     private let stackView = UIStackView()
     private let changeRootViewButton = UIButton()
-    private let popViewButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttributes()
         layoutViews()
+    }
+    
+    deinit {
+        print("BlueViewController deinit")
     }
 }
 
@@ -30,14 +33,9 @@ extension BlueViewController {
         
         stackView.axis = .vertical
         
-        popViewButton.backgroundColor = .yellow
-        popViewButton.addTarget(self, action: #selector(popViewButtonAction), for: .touchUpInside)
-        popViewButton.setTitle("PopView", for: .normal)
-        popViewButton.setTitleColor(.black, for: .normal)
-        
         changeRootViewButton.backgroundColor = .orange
         changeRootViewButton.addTarget(self, action: #selector(changeRootViewButtonAction), for: .touchUpInside)
-        changeRootViewButton.setTitle("ChangeRoot", for: .normal)
+        changeRootViewButton.setTitle("To Login", for: .normal)
         changeRootViewButton.setTitleColor(.black, for: .normal)
     }
     
@@ -53,15 +51,12 @@ extension BlueViewController {
             ]
         )
         
-        stackView.addArrangedSubviews([popViewButton, changeRootViewButton])
+        stackView.addArrangedSubview(changeRootViewButton)
     }
 }
 
 extension BlueViewController {
     
-    @objc func popViewButtonAction() {
-        model?.popView()
-    }
     @objc func changeRootViewButtonAction() {
         model?.changeRoot()
     }

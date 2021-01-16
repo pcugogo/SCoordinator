@@ -1,16 +1,16 @@
 //
-//  GreenViewController.swift
+//  NavyViewController.swift
 //  SCoordinator_Example
 //
-//  Created by ChanWook Park on 2020/12/22.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Created by ChanWook Park on 2021/01/16.
+//  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import UIKit
 
-final class GreenViewController: UIViewController {
+final class NavyViewController: UIViewController {
     
-    var model: GreenModel?
+    var model: NavyModel?
     
     private let stackView = UIStackView()
     private let dismissButton = UIButton()
@@ -22,21 +22,21 @@ final class GreenViewController: UIViewController {
     }
     
     deinit {
-        print("GreenViewController deinit")
+        print("NavyViewController deinit")
     }
 }
 
-extension GreenViewController {
+extension NavyViewController {
     
     private func setAttributes() {
         
-        self.view.backgroundColor = .green
+        self.view.backgroundColor = .navy
         
         stackView.axis = .vertical
         
-        dismissButton.backgroundColor = .white
+        dismissButton.backgroundColor = .orange
         dismissButton.addTarget(self, action: #selector(dismissButtonAction), for: .touchUpInside)
-        dismissButton.setTitle("Dismiss", for: .normal)
+        dismissButton.setTitle("PopView", for: .normal)
         dismissButton.setTitleColor(.black, for: .normal)
     }
     
@@ -57,8 +57,8 @@ extension GreenViewController {
     }
 }
 
-extension GreenViewController {
+extension NavyViewController {
     @objc func dismissButtonAction() {
-        model?.dismiss()
+        model?.popView()
     }
 }

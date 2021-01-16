@@ -19,9 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(rootView: window!)
-        appCoordinator.navigate(to: AppRoute.main)
+        appCoordinator.navigate(to: ExampleRoute.login)
         
         return true
     }
 }
 
+extension AppDelegate {
+    func rootViewChange(route: ExampleRoute) {
+        appCoordinator.navigate(to: route)
+    }
+}

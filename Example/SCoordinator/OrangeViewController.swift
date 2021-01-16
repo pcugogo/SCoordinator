@@ -8,18 +8,22 @@
 
 import UIKit
 
-final class OrangeViewController: BaseViewController {
+final class OrangeViewController: UIViewController {
     
     var model: OrangeModel?
     
     private let stackView = UIStackView()
-    private let yellowButton = UIButton()
+    private let navyButton = UIButton()
     private let greenButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttributes()
         layoutViews()
+    }
+    
+    deinit {
+        print("OrangeViewController deinit")
     }
 }
 
@@ -29,12 +33,14 @@ extension OrangeViewController {
         
         self.view.backgroundColor = .orange
         
+        self.navigationController?.navigationBar.topItem?.title  = "Orange"
+        
         stackView.axis = .vertical
         
-        yellowButton.backgroundColor = .yellow
-        yellowButton.addTarget(self, action: #selector(yellowButtonAction), for: .touchUpInside)
-        yellowButton.setTitle("moveToYellow", for: .normal)
-        yellowButton.setTitleColor(.black, for: .normal)
+        navyButton.backgroundColor = .navy
+        navyButton.addTarget(self, action: #selector(navyButtonAction), for: .touchUpInside)
+        navyButton.setTitle("moveToNavy", for: .normal)
+        navyButton.setTitleColor(.white, for: .normal)
         
         greenButton.backgroundColor = .green
         greenButton.addTarget(self, action: #selector(greenButtonAction), for: .touchUpInside)
@@ -54,17 +60,16 @@ extension OrangeViewController {
             ]
         )
         
-        stackView.addArrangedSubviews([yellowButton, greenButton])
+        stackView.addArrangedSubviews([navyButton, greenButton])
     }
 }
 
 extension OrangeViewController {
     
-    @objc func yellowButtonAction() {
-        model?.moveToYellow()
+    @objc func navyButtonAction() {
+        model?.moveToNavy()
     }
     @objc func greenButtonAction() {
         model?.moveToGreen()
     }
 }
-

@@ -20,7 +20,6 @@
 		FC157B2C25950675009CC119 /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC157B2B25950675009CC119 /* ParentCoordinator.swift */; };
 		FC3F914D25921321003D2327 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F914C25921321003D2327 /* Coordinator.swift */; };
 		FC3F915525921341003D2327 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F915425921341003D2327 /* CoordinatorType.swift */; };
-		FC3F91622592136C003D2327 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91612592136C003D2327 /* Coordinatable.swift */; };
 		FC3F9171259213AE003D2327 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F9170259213AE003D2327 /* Route.swift */; };
 		FC3F9176259213C1003D2327 /* UIViewController+RootViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F9175259213C1003D2327 /* UIViewController+RootViewType.swift */; };
 		FC3F917B259213DA003D2327 /* UIWindow+RootViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F917A259213DA003D2327 /* UIWindow+RootViewType.swift */; };
@@ -83,7 +82,6 @@
 		FC157B2B25950675009CC119 /* ParentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParentCoordinator.swift; path = SCoordinator/Classes/ParentCoordinator.swift; sourceTree = "<group>"; };
 		FC3F914C25921321003D2327 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = SCoordinator/Classes/Coordinator.swift; sourceTree = "<group>"; };
 		FC3F915425921341003D2327 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoordinatorType.swift; path = SCoordinator/Classes/CoordinatorType.swift; sourceTree = "<group>"; };
-		FC3F91612592136C003D2327 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Coordinatable.swift; path = SCoordinator/Classes/Coordinatable.swift; sourceTree = "<group>"; };
 		FC3F9170259213AE003D2327 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Route.swift; path = SCoordinator/Classes/Route.swift; sourceTree = "<group>"; };
 		FC3F9175259213C1003D2327 /* UIViewController+RootViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+RootViewType.swift"; path = "SCoordinator/Classes/UIViewController+RootViewType.swift"; sourceTree = "<group>"; };
 		FC3F917A259213DA003D2327 /* UIWindow+RootViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIWindow+RootViewType.swift"; path = "SCoordinator/Classes/UIWindow+RootViewType.swift"; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 				FC7188CF25A4A4660012A9C8 /* BaseCoordinator.swift */,
 				FC3F914C25921321003D2327 /* Coordinator.swift */,
 				FC3F915425921341003D2327 /* CoordinatorType.swift */,
-				FC3F91612592136C003D2327 /* Coordinatable.swift */,
 				FC157B262595051A009CC119 /* EndType.swift */,
 				FC157B2B25950675009CC119 /* ParentCoordinator.swift */,
 				FC3F9287259263EB003D2327 /* RootViewType.swift */,
@@ -411,7 +408,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3F914D25921321003D2327 /* Coordinator.swift in Sources */,
-				FC3F91622592136C003D2327 /* Coordinatable.swift in Sources */,
 				FC3F915525921341003D2327 /* CoordinatorType.swift in Sources */,
 				FC3F917B259213DA003D2327 /* UIWindow+RootViewType.swift in Sources */,
 				FC7188D225A4A4660012A9C8 /* RootCoordinator.swift in Sources */,

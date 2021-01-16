@@ -8,22 +8,24 @@
 
 import UIKit
 
-final class YellowViewController: BaseViewController {
+final class YellowViewController: UIViewController {
     
     var model: YellowModel?
     
     private let stackView = UIStackView()
     private let blueButton = UIButton()
     private let greenButton = UIButton()
-    private let dismissButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttributes()
         layoutViews()
     }
+    
+    deinit {
+        print("YellowViewController deinit")
+    }
 }
-
 
 extension YellowViewController {
     
@@ -42,11 +44,6 @@ extension YellowViewController {
         greenButton.addTarget(self, action: #selector(greenButtonAction), for: .touchUpInside)
         greenButton.setTitle("moveToGreen", for: .normal)
         greenButton.setTitleColor(.black, for: .normal)
-        
-        dismissButton.backgroundColor = .white
-        dismissButton.addTarget(self, action: #selector(dismissButtonAction), for: .touchUpInside)
-        dismissButton.setTitle("Dismiss", for: .normal)
-        dismissButton.setTitleColor(.black, for: .normal)
     }
     
     private func layoutViews() {
@@ -62,7 +59,7 @@ extension YellowViewController {
             ]
         )
         
-        stackView.addArrangedSubviews([blueButton, greenButton, dismissButton])
+        stackView.addArrangedSubviews([blueButton, greenButton])
     }
 }
 
@@ -74,9 +71,5 @@ extension YellowViewController {
     
     @objc func greenButtonAction() {
         model?.moveToGreen()
-    }
-    
-    @objc func dismissButtonAction() {
-        model?.dismiss()
     }
 }

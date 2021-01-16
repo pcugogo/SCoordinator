@@ -13,11 +13,15 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6E96D97BCA2096DFAEE22246 /* Pods_SCoordinator_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA015800C863D5A5F0DC3B6 /* Pods_SCoordinator_Tests.framework */; };
 		7F0CFDF62B28315E87C629FB /* Pods_SCoordinator_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B42D714263F8FD17B4CC3EF /* Pods_SCoordinator_Example.framework */; };
+		FC147A7025B31D0E0062EBE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC147A6F25B31D0E0062EBE2 /* LoginViewController.swift */; };
+		FC147A7625B31D1D0062EBE2 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC147A7525B31D1D0062EBE2 /* LoginModel.swift */; };
+		FC147A7A25B31E8B0062EBE2 /* RedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC147A7925B31E8B0062EBE2 /* RedCoordinator.swift */; };
+		FC147A7E25B31EB50062EBE2 /* OrangeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC147A7D25B31EB50062EBE2 /* OrangeCoordinator.swift */; };
+		FC147A8325B31EE80062EBE2 /* NavyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC147A8225B31EE80062EBE2 /* NavyViewController.swift */; };
+		FC147A8925B31EF80062EBE2 /* NavyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC147A8825B31EF80062EBE2 /* NavyModel.swift */; };
+		FC147A8D25B324E20062EBE2 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC147A8C25B324E20062EBE2 /* UIColor+CustomColor.swift */; };
 		FC3F918625921493003D2327 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F918525921493003D2327 /* AppCoordinator.swift */; };
-		FC3F9193259214B2003D2327 /* YellowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F9192259214B2003D2327 /* YellowCoordinator.swift */; };
 		FC3F919C259214DB003D2327 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F919B259214DB003D2327 /* AppRoute.swift */; };
-		FC3F91A2259214EB003D2327 /* MainRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91A1259214EB003D2327 /* MainRoute.swift */; };
-		FC3F91A6259214F6003D2327 /* YellowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91A5259214F6003D2327 /* YellowRoute.swift */; };
 		FC3F91B4259215CE003D2327 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91B3259215CE003D2327 /* MainViewController.swift */; };
 		FC3F91BA259215DF003D2327 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91B9259215DF003D2327 /* RedViewController.swift */; };
 		FC3F91C2259215F4003D2327 /* YellowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91C1259215F4003D2327 /* YellowViewController.swift */; };
@@ -28,8 +32,6 @@
 		FC3F91EC259216DE003D2327 /* GreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91EB259216DE003D2327 /* GreenModel.swift */; };
 		FC3F91F6259216F1003D2327 /* BlueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91F5259216F1003D2327 /* BlueModel.swift */; };
 		FC3F91FF25921729003D2327 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F91FE25921729003D2327 /* BaseModel.swift */; };
-		FC3F92052592189F003D2327 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F92042592189F003D2327 /* BaseViewController.swift */; };
-		FC3F921325922470003D2327 /* GreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F921225922470003D2327 /* GreenCoordinator.swift */; };
 		FC3F922525922A58003D2327 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F922425922A58003D2327 /* MainCoordinator.swift */; };
 		FC3F923E259237D6003D2327 /* OrangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F923C259237D5003D2327 /* OrangeModel.swift */; };
 		FC3F923F259237D6003D2327 /* OrangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F923D259237D6003D2327 /* OrangeViewController.swift */; };
@@ -64,11 +66,15 @@
 		B1D1EE9F68BB6091BF7AB655 /* Pods-SCoordinator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCoordinator_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SCoordinator_Tests/Pods-SCoordinator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0D5C35BA81FFC413B84486 /* Pods-SCoordinator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCoordinator_Tests.release.xcconfig"; path = "Target Support Files/Pods-SCoordinator_Tests/Pods-SCoordinator_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EA968A8504488F12691B9332 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FC147A6F25B31D0E0062EBE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC147A7525B31D1D0062EBE2 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		FC147A7925B31E8B0062EBE2 /* RedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedCoordinator.swift; sourceTree = "<group>"; };
+		FC147A7D25B31EB50062EBE2 /* OrangeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeCoordinator.swift; sourceTree = "<group>"; };
+		FC147A8225B31EE80062EBE2 /* NavyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavyViewController.swift; sourceTree = "<group>"; };
+		FC147A8825B31EF80062EBE2 /* NavyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavyModel.swift; sourceTree = "<group>"; };
+		FC147A8C25B324E20062EBE2 /* UIColor+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColor.swift"; sourceTree = "<group>"; };
 		FC3F918525921493003D2327 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		FC3F9192259214B2003D2327 /* YellowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowCoordinator.swift; sourceTree = "<group>"; };
 		FC3F919B259214DB003D2327 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
-		FC3F91A1259214EB003D2327 /* MainRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRoute.swift; sourceTree = "<group>"; };
-		FC3F91A5259214F6003D2327 /* YellowRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowRoute.swift; sourceTree = "<group>"; };
 		FC3F91B3259215CE003D2327 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FC3F91B9259215DF003D2327 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		FC3F91C1259215F4003D2327 /* YellowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowViewController.swift; sourceTree = "<group>"; };
@@ -79,8 +85,6 @@
 		FC3F91EB259216DE003D2327 /* GreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenModel.swift; sourceTree = "<group>"; };
 		FC3F91F5259216F1003D2327 /* BlueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueModel.swift; sourceTree = "<group>"; };
 		FC3F91FE25921729003D2327 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		FC3F92042592189F003D2327 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		FC3F921225922470003D2327 /* GreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCoordinator.swift; sourceTree = "<group>"; };
 		FC3F922425922A58003D2327 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FC3F923C259237D5003D2327 /* OrangeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeModel.swift; sourceTree = "<group>"; };
 		FC3F923D259237D6003D2327 /* OrangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
@@ -194,14 +198,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC147A6E25B31CFE0062EBE2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FC147A6F25B31D0E0062EBE2 /* LoginViewController.swift */,
+				FC147A7525B31D1D0062EBE2 /* LoginModel.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		FC147A8125B31ED40062EBE2 /* Navy */ = {
+			isa = PBXGroup;
+			children = (
+				FC147A8225B31EE80062EBE2 /* NavyViewController.swift */,
+				FC147A8825B31EF80062EBE2 /* NavyModel.swift */,
+			);
+			name = Navy;
+			sourceTree = "<group>";
+		};
 		FC3F918425921484003D2327 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				FC3F919A259214D2003D2327 /* Routes */,
 				FC3F918525921493003D2327 /* AppCoordinator.swift */,
 				FC3F922425922A58003D2327 /* MainCoordinator.swift */,
-				FC3F9192259214B2003D2327 /* YellowCoordinator.swift */,
-				FC3F921225922470003D2327 /* GreenCoordinator.swift */,
+				FC147A7925B31E8B0062EBE2 /* RedCoordinator.swift */,
+				FC147A7D25B31EB50062EBE2 /* OrangeCoordinator.swift */,
 			);
 			name = Coordinators;
 			sourceTree = "<group>";
@@ -210,8 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				FC3F919B259214DB003D2327 /* AppRoute.swift */,
-				FC3F91A1259214EB003D2327 /* MainRoute.swift */,
-				FC3F91A5259214F6003D2327 /* YellowRoute.swift */,
 			);
 			name = Routes;
 			sourceTree = "<group>";
@@ -248,12 +268,14 @@
 			isa = PBXGroup;
 			children = (
 				FC3F91FD2592171A003D2327 /* Base */,
+				FC147A6E25B31CFE0062EBE2 /* Login */,
 				FC3F91D125921613003D2327 /* Main */,
 				FC3F91D225921618003D2327 /* Red */,
 				FC3F923B259237B6003D2327 /* Orange */,
 				FC3F91D425921623003D2327 /* Yellow */,
 				FC3F91D62592162F003D2327 /* Green */,
 				FC3F91D525921628003D2327 /* Blue */,
+				FC147A8125B31ED40062EBE2 /* Navy */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -306,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				FC3F91FE25921729003D2327 /* BaseModel.swift */,
-				FC3F92042592189F003D2327 /* BaseViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -324,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3F927325924B2B003D2327 /* UIStackView+addArrangedSubviews.swift */,
+				FC147A8C25B324E20062EBE2 /* UIColor+CustomColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -499,25 +521,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3F91E0259216C4003D2327 /* RedModel.swift in Sources */,
-				FC3F91A6259214F6003D2327 /* YellowRoute.swift in Sources */,
 				FC3F91EC259216DE003D2327 /* GreenModel.swift in Sources */,
+				FC147A7025B31D0E0062EBE2 /* LoginViewController.swift in Sources */,
+				FC147A7E25B31EB50062EBE2 /* OrangeCoordinator.swift in Sources */,
 				FC3F91FF25921729003D2327 /* BaseModel.swift in Sources */,
 				FC3F918625921493003D2327 /* AppCoordinator.swift in Sources */,
 				FC3F91C2259215F4003D2327 /* YellowViewController.swift in Sources */,
 				FC3F927425924B2B003D2327 /* UIStackView+addArrangedSubviews.swift in Sources */,
 				FC3F923F259237D6003D2327 /* OrangeViewController.swift in Sources */,
 				FC3F91E8259216D5003D2327 /* YellowModel.swift in Sources */,
+				FC147A7A25B31E8B0062EBE2 /* RedCoordinator.swift in Sources */,
 				FC3F91F6259216F1003D2327 /* BlueModel.swift in Sources */,
+				FC147A8D25B324E20062EBE2 /* UIColor+CustomColor.swift in Sources */,
 				FC3F91C6259215FD003D2327 /* BlueViewController.swift in Sources */,
-				FC3F9193259214B2003D2327 /* YellowCoordinator.swift in Sources */,
+				FC147A7625B31D1D0062EBE2 /* LoginModel.swift in Sources */,
 				FC3F919C259214DB003D2327 /* AppRoute.swift in Sources */,
+				FC147A8925B31EF80062EBE2 /* NavyModel.swift in Sources */,
 				FC3F923E259237D6003D2327 /* OrangeModel.swift in Sources */,
 				FC3F91CA25921605003D2327 /* GreenViewController.swift in Sources */,
 				FC3F91BA259215DF003D2327 /* RedViewController.swift in Sources */,
-				FC3F92052592189F003D2327 /* BaseViewController.swift in Sources */,
-				FC3F921325922470003D2327 /* GreenCoordinator.swift in Sources */,
-				FC3F91A2259214EB003D2327 /* MainRoute.swift in Sources */,
 				FC3F922525922A58003D2327 /* MainCoordinator.swift in Sources */,
+				FC147A8325B31EE80062EBE2 /* NavyViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				FC3F91B4259215CE003D2327 /* MainViewController.swift in Sources */,
 			);

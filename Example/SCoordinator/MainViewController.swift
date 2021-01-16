@@ -15,37 +15,6 @@ final class MainViewController: UITabBarController {
     }
     
     deinit {
-        print("\(String(describing: Self.self)) deinit")
-    }
-}
-
-extension MainViewController {
-    
-    func setAttributes(redModel: RedModel, orangeModel: OrangeModel) {
-        
-        let redTabBarItem: UITabBarItem = .init(
-            title: "Red",
-            image: nil,
-            selectedImage: nil
-        )
-        let orangeTabBarItem: UITabBarItem = .init(
-            title: "Orange",
-            image: nil,
-            selectedImage: nil
-        )
-        
-        let redViewController = RedViewController()
-        let orangeViewController = OrangeViewController()
-        
-        redViewController.tabBarItem = redTabBarItem
-        orangeViewController.tabBarItem = orangeTabBarItem
-        
-        redViewController.model = redModel
-        orangeViewController.model = orangeModel
-        
-        viewControllers = [
-            orangeViewController,
-            redViewController
-        ]
+        print("MainViewController deinit")
     }
 }

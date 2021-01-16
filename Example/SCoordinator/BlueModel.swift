@@ -10,10 +10,7 @@ import Foundation
 
 final class BlueModel: BaseModel {
     
-    func popView() {
-        coordinator.end(type: .popView(animated: true))
-    }
     func changeRoot() {
-        coordinator.navigate(to: YellowRoute.changeRoot)
+        coordinator.navigate(to: ExampleRoute.changeRoot)
     }
 }
