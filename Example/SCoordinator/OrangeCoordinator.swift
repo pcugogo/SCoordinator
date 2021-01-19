@@ -29,10 +29,6 @@ final class OrangeCoordinator: Coordinator<UINavigationController> {
             break
         }
     }
-    
-    deinit {
-        print("\(String(describing: Self.self)) deinit")
-    }
 }
 
 extension OrangeCoordinator {

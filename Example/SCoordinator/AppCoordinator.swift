@@ -12,6 +12,7 @@ import SCoordinator
 final class AppCoordinator: RootCoordinator<UIWindow> {
     
     override func navigate(to route: Route) {
+        childrens.removeAll()
         guard let exampleRoute = route as? ExampleRoute else { return }
         switch exampleRoute {
         case .main:
