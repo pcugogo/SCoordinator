@@ -32,10 +32,6 @@ final class RedCoordinator: Coordinator<UINavigationController> {
             break
         }
     }
-    
-    deinit {
-        print("\(String(describing: Self.self)) deinit")
-    }
 }
 
 extension RedCoordinator {
@@ -79,7 +75,6 @@ extension RedCoordinator {
     }
     
     private func changeRoot() {
-        rootCoordinator?.childrens.removeAll()
         (UIApplication.shared.delegate as? AppDelegate)?.rootViewChange(route: ExampleRoute.login)
     }
 }

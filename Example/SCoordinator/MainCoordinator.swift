@@ -21,10 +21,6 @@ final class MainCoordinator: Coordinator<MainViewController> {
             break
         }
     }
-    
-    deinit {
-        print("\(String(describing: Self.self)) deinit")
-    }
 }
 
 extension MainCoordinator {
