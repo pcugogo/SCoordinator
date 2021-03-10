@@ -11,6 +11,6 @@ import Foundation
 final class BlueModel: BaseModel {
     
     func changeRoot() {
-        coordinator.navigate(to: ExampleRoute.changeRoot)
+        coordinator?.navigate(to: ExampleRoute.changeRoot)
     }
 }

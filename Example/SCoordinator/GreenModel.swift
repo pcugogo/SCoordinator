@@ -11,6 +11,6 @@ import Foundation
 final class GreenModel: BaseModel {
     
     func dismiss() {
-        coordinator.navigate(to: ExampleRoute.dismiss())
+        coordinator?.navigate(to: ExampleRoute.dismiss())
     }
 }

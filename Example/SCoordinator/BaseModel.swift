@@ -10,5 +10,5 @@ import Foundation
 import SCoordinator
 
 class BaseModel {
-    unowned var coordinator: CoordinatorType!
+    weak var coordinator: CoordinatorType?
 }

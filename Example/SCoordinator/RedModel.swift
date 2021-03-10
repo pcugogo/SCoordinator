@@ -11,10 +11,10 @@ import Foundation
 final class RedModel: BaseModel {
     
     func moveToYellow() {
-        coordinator.navigate(to: ExampleRoute.yellow)
+        coordinator?.navigate(to: ExampleRoute.yellow)
     }
     
     func moveToGreen() {
-        coordinator.navigate(to: ExampleRoute.green)
+        coordinator?.navigate(to: ExampleRoute.green)
     }
 }
